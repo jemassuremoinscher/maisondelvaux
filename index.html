@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Delvaux | Luxury Concierge Services</title>
+<meta name="description" content="Maison Delvaux – Elite luxury concierge services across 12 global destinations. Yachts, fine dining, exclusive experiences. Discretion. Precision. Excellence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#fff;color:#333;font-family:'Poppins',sans-serif;font-weight:400;line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* ANNOUNCEMENT */
+.ann-bar{background:#0a0a0a;color:#fff;text-align:center;padding:9px 20px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+
+/* NAV */
+nav{background:#fff;border-bottom:1px solid #e8e2d8;position:sticky;top:0;z-index:999}
+.nav-inner{max-width:1300px;margin:0 auto;padding:0 30px;display:flex;align-items:center;justify-content:space-between;height:75px}
+.nav-logo{display:flex;flex-direction:column;align-items:flex-start;gap:0;text-decoration:none;cursor:pointer}.nav-logo-mono{font-family:'Lora',serif;font-size:1.6rem;font-weight:500;color:#333;letter-spacing:.15em;line-height:1}.nav-logo-name{font-family:'Poppins',sans-serif;font-size:.55rem;font-weight:600;letter-spacing:.35em;text-transform:uppercase;color:#8B7755;line-height:1;margin-top:3px}
+.nav-menu{display:flex;align-items:center;list-style:none;gap:0}
+.nav-item{position:relative}
+.nav-link{display:block;padding:0 14px;height:75px;line-height:75px;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#555;transition:color .2s;cursor:pointer;white-space:nowrap}
+.nav-link:hover{color:#8B7755}
+.nav-item:hover .dropdown{opacity:1;pointer-events:all;transform:translateY(0)}
+.dropdown{position:absolute;top:100%;left:0;min-width:210px;background:#fff;border:1px solid #e8e2d8;border-top:2px solid #8B7755;opacity:0;pointer-events:none;transform:translateY(-6px);transition:all .22s;z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.dropdown a{display:block;padding:12px 22px;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#666;border-bottom:1px solid #f5f0ea;transition:all .18s}
+.dropdown a:last-child{border-bottom:none}
+.dropdown a:hover{color:#8B7755;padding-left:28px;background:#faf8f5}
+.nav-btn{background:#8B7755;color:#fff !important;padding:10px 22px !important;height:auto !important;line-height:1.4 !important;border-radius:25px;margin-left:8px;font-weight:700 !important;transition:background .2s !important}
+.nav-btn:hover{background:#7a6748 !important}
+
+/* HERO */
+.hero{position:relative;height:100vh;min-height:620px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1800&fit=crop') center/cover;animation:hZoom 18s ease-in-out infinite alternate}
+@keyframes hZoom{from{transform:scale(1)}to{transform:scale(1.06)}}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.52)}
+.hero-content{position:relative;z-index:2;padding:0 20px}
+.hero-pretitle{font-size:.72rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:1.2rem}
+.hero h1{font-family:'Lora',serif;font-size:clamp(3rem,7vw,5.5rem);font-style:normal;color:#fff;line-height:1.15;margin-bottom:2rem;font-weight:400}
+.btn-gold{display:inline-block;background:#8B7755;color:#fff;padding:14px 36px;border-radius:30px;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;transition:background .2s;border:none;cursor:pointer}
+.btn-gold:hover{background:#7a6748}
+.btn-outline-white{display:inline-block;background:transparent;color:#fff;padding:14px 36px;border-radius:30px;font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border:2px solid rgba(255,255,255,.6);transition:all .2s;margin-left:12px}
+.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-dot{width:28px;height:28px;border:2px solid rgba(255,255,255,.5);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.scroll-dot::after{content:'';width:4px;height:4px;background:#fff;border-radius:50%;animation:sBounce 1.8s ease-in-out infinite}
+@keyframes sBounce{0%,100%{transform:translateY(-4px)}50%{transform:translateY(4px)}}
+.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent)}
+
+/* WELCOME */
+.welcome{padding:90px 30px;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.w-pretitle{font-size:.7rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#8B7755;margin-bottom:.8rem}
+.w-title{font-family:'Lora',serif;font-size:clamp(2.2rem,3.5vw,3.2rem);font-style:normal;color:#8B7755;margin-bottom:1.5rem;line-height:1.2}
+.w-body p{color:#666;font-size:.95rem;line-height:1.85;margin-bottom:1.2rem}
+.w-imgs{position:relative;height:380px}
+.w-img1{position:absolute;top:0;right:0;width:72%;height:260px;object-fit:cover;border-radius:6px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.w-img2{position:absolute;bottom:0;left:0;width:60%;height:220px;object-fit:cover;border-radius:6px;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+
+/* SECTION LABEL */
+.sec-pre{font-size:.7rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#8B7755;text-align:center;margin-bottom:.6rem}
+.sec-title{font-family:'Lora',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-style:normal;color:#8B7755;text-align:center;margin-bottom:.6rem}
+.sec-sub{font-size:.88rem;color:#888;text-align:center;max-width:680px;margin:0 auto 3rem;line-height:1.8}
+
+/* SERVICES GRID - watermark bg */
+.services-wrap{position:relative;padding:80px 0;overflow:hidden}
+.services-watermark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.04;font-size:22vw;font-weight:900;color:#333;letter-spacing:-.05em;pointer-events:none;user-select:none;white-space:nowrap}
+.services-header{max-width:1300px;margin:0 auto;padding:0 30px;margin-bottom:40px;text-align:center}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.svc-card{position:relative;height:300px;overflow:hidden;cursor:pointer}
+.svc-card img{width:100%;height:100%;object-fit:cover;filter:brightness(.6);transition:transform .6s ease,filter .5s ease}
+.svc-card:hover img{transform:scale(1.06);filter:brightness(.4)}
+.svc-label{position:absolute;bottom:0;left:0;right:0;padding:24px 28px;z-index:2}
+.svc-label h3{font-family:'Lora',serif;font-size:1.9rem;color:#fff;line-height:1.2}
+.svc-label .svc-link{display:inline-block;margin-top:6px;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0);border-bottom:1px solid transparent;transition:all .35s}
+.svc-card:hover .svc-link{color:rgba(255,255,255,.85);border-bottom-color:rgba(255,255,255,.5)}
+
+/* FEATURED (edge-to-edge images) */
+.featured-wrap{padding:80px 0}
+.featured-header{max-width:1300px;margin:0 auto;padding:0 30px}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px}
+.feat-card{position:relative;overflow:hidden;cursor:pointer}
+.feat-card img{width:100%;height:280px;object-fit:cover;display:block;transition:transform .5s ease;filter:brightness(.82)}
+.feat-card:hover img{transform:scale(1.05);filter:brightness(.65)}
+.feat-info{padding:22px 24px 28px;background:#fff;border:1px solid #f0ebe2;border-top:none}
+.feat-info h4{font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#333;margin-bottom:6px}
+.feat-meta{display:flex;gap:1.5rem;font-size:.72rem;color:#8B7755;font-weight:600;letter-spacing:.08em;text-transform:uppercase;align-items:center}
+.feat-meta span::before{content:'◆ ';font-size:.5rem}
+.feat-enquire{display:block;margin-top:12px;font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#8B7755;border-bottom:1px solid #8B7755;display:inline-block;padding-bottom:2px;transition:opacity .2s}
+.feat-enquire:hover{opacity:.7}
+
+/* STATS BANNER */
+.stats-banner{background:linear-gradient(135deg,#2d1f4a 0%,#3d2a60 100%);border-radius:16px;margin:0 30px 80px;padding:50px 40px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:20px;align-items:center;max-width:1240px;margin-left:auto;margin-right:auto}
+.stats-banner-text{color:#fff}
+.stats-banner-text h3{font-family:'Lora',serif;font-size:2.4rem;line-height:1.3;margin-bottom:.5rem}
+.stats-banner-text p{font-size:.8rem;opacity:.7;letter-spacing:.08em;text-transform:uppercase}
+.stat-block{text-align:center;border-left:1px solid rgba(255,255,255,.15);padding:10px 20px}
+.stat-icon{font-size:2rem;margin-bottom:8px}
+.stat-lbl{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.8);font-weight:500}
+.stat-val{font-family:'Lora',serif;font-size:1.6rem;color:#fff}
+
+/* DESTINATIONS */
+.dest-wrap{padding:80px 0}
+.dest-header{max-width:1300px;margin:0 auto;padding:0 30px;margin-bottom:40px}
+.dest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.dest-card{position:relative;height:240px;overflow:hidden;cursor:pointer}
+.dest-card img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.55);transition:all .5s ease}
+.dest-card:hover img{filter:brightness(.38);transform:scale(1.06)}
+.dest-info{position:absolute;bottom:0;left:0;right:0;padding:20px 22px;background:linear-gradient(to top,rgba(0,0,0,.6) 0%,transparent 100%)}
+.dest-info h4{font-family:'Lora',serif;font-size:1.7rem;color:#fff;line-height:1}
+.dest-info span{font-size:.63rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0);transition:color .3s}
+.dest-card:hover .dest-info span{color:rgba(255,255,255,.8)}
+.dest-border{position:absolute;inset:0;border:2px solid transparent;transition:border-color .3s;pointer-events:none}
+.dest-card:hover .dest-border{border-color:#8B7755}
+
+/* MORGANE */
+.morgane-wrap{background:#faf8f5;padding:90px 30px}
+.morgane-inner{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.morgane-photo{height:520px;overflow:hidden;border-radius:6px;box-shadow:0 12px 40px rgba(0,0,0,.12)}
+.morgane-photo img{width:100%;height:100%;object-fit:cover}
+.morgane-text .w-pretitle{text-align:left}
+.morgane-text .w-title{text-align:left}
+.morgane-text p{color:#666;font-size:.95rem;line-height:1.85;margin-bottom:1.2rem}
+.morgane-sig{font-family:'Lora',serif;font-size:2.4rem;color:#8B7755;margin-top:1.5rem}
+.morgane-role{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8B7755;margin-top:.3rem}
+
+/* TESTIMONIALS */
+.testi-wrap{padding:80px 30px}
+.testi-inner{max-width:1300px;margin:0 auto}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.testi-card{background:#fff;border:1px solid #ede8e0;border-radius:8px;padding:32px;position:relative}
+.testi-card.featured{border:2px solid #8B7755;transform:scale(1.03)}
+.testi-card p{font-size:.9rem;color:#555;line-height:1.8;margin-bottom:1.5rem}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:#e8e2d8;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:#8B7755;flex-shrink:0}
+.testi-author-info h5{font-size:.82rem;font-weight:700;color:#333;margin-bottom:1px}
+.testi-author-info span{font-size:.75rem;color:#888}
+.testi-dots{display:flex;justify-content:center;gap:8px;margin-top:30px}
+.testi-dots span{width:8px;height:8px;border-radius:50%;background:#ddd;cursor:pointer}
+.testi-dots span.active{background:#8B7755}
+
+/* CONTACT CTA */
+.cta-wrap{padding:90px 30px;background:#faf8f5}
+.cta-inner{max-width:900px;margin:0 auto;text-align:center}
+.cta-inner p.body{color:#666;font-size:.95rem;max-width:540px;margin:0 auto 2.5rem;line-height:1.85}
+.contact-blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px;text-align:left}
+.c-block{background:#fff;border:1px solid #ede8e0;padding:28px;border-radius:6px}
+.c-block-icon{font-size:1.4rem;margin-bottom:12px}
+.c-block h5{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8B7755;margin-bottom:8px}
+.c-block p{font-size:.88rem;color:#666;line-height:1.6}
+
+/* FOOTER */
+footer{background:#111;color:#ccc;padding:60px 30px 30px}
+.footer-inner{max-width:1300px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:50px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:25px}
+.footer-logo{font-family:'Lora',serif;font-size:2rem;color:#fff;display:block;margin-bottom:12px}
+.footer-brand p{font-size:.82rem;color:#777;line-height:1.8;max-width:260px}
+.footer-col h5{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#8B7755;margin-bottom:14px}
+.footer-col a{display:block;font-size:.82rem;color:#777;margin-bottom:6px;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;font-size:.72rem;color:#555;flex-wrap:wrap;gap:10px}
+.footer-legal{display:flex;gap:16px}
+.footer-legal a{color:#555;font-size:.7rem;transition:color .2s}
+.footer-legal a:hover{color:#8B7755}
+
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+.hamburger span{display:block;width:22px;height:2px;background:#333;transition:all .3s}
+
+/* FADE IN */
+.fi{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.fi.vis{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .nav-menu{display:none}
+  .hamburger{display:flex}
+  .nav-menu.open{display:flex;flex-direction:column;position:fixed;top:75px;left:0;right:0;background:#fff;border-top:1px solid #e8e2d8;padding:20px 0 40px;height:calc(100vh - 75px);overflow-y:auto;z-index:998}
+  .nav-link{height:auto;line-height:1;padding:14px 28px}
+  .dropdown{position:static;opacity:1;pointer-events:all;transform:none;border:none;box-shadow:none;background:#faf8f5;margin-left:20px;display:none}
+  .nav-item.open .dropdown{display:block}
+  .welcome,.morgane-inner{grid-template-columns:1fr;gap:40px}
+  .svc-grid{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .dest-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:30px}
+  .stats-banner{grid-template-columns:1fr 1fr;margin:0 16px 60px}
+  .contact-blocks{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .dest-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:.5rem}
+  .hero h1{font-size:3rem}
+  .stats-banner{grid-template-columns:1fr}
+}
+
+/* WHATSAPP STICKY */
+.wa-btn{position:fixed;bottom:28px;right:28px;z-index:9999;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:all .3s;text-decoration:none}
+.wa-btn:hover{background:#1ebe5d;transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.55)}
+.wa-btn svg{width:30px;height:30px;fill:#fff}
+.wa-tooltip{position:absolute;right:70px;background:#111;color:#fff;padding:7px 14px;border-radius:6px;font-size:.72rem;font-weight:600;letter-spacing:.08em;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.wa-btn:hover .wa-tooltip{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="ann-bar">🌍 Private Concierge Excellence &nbsp;·&nbsp; 12 Global Destinations &nbsp;·&nbsp; 24/7 Service &nbsp;·&nbsp; +971 52 306 8015</div>
+
+<!-- NAVIGATION -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo"><span class="nav-logo-mono">MD</span><span class="nav-logo-name">Maison Delvaux</span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li class="nav-item">
+        <span class="nav-link" onclick="toggleDrop(this)">Yachts ▾</span>
+        <div class="dropdown">
+          <a href="services.html#yachts">Private Yacht Charters</a>
+          <a href="services.html#yachts">Superyacht Experiences</a>
+          <a href="services.html#yachts">Yacht Packages</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link" onclick="toggleDrop(this)">Reservations ▾</span>
+        <div class="dropdown">
+          <a href="services.html#dining">Fine Dining & Michelin</a>
+          <a href="services.html#beach">Beach & Pool Clubs</a>
+          <a href="services.html#hotels">Luxury Hotels & Villas</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link" onclick="toggleDrop(this)">Experiences ▾</span>
+        <div class="dropdown">
+          <a href="services.html#experiences">Bespoke Experiences</a>
+          <a href="services.html#experiences">Private Shopping</a>
+          <a href="services.html#corporate">Corporate & Events</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="#destinations" class="nav-link">Destinations</a></li>
+      <li class="nav-item"><a href="blog.html" class="nav-link">Journal</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link nav-btn">Enquire Now</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-pretitle">Luxury Concierge Services Worldwide</p>
+    <h1>unlocking your bespoke<br>world experience</h1>
+    <a href="#contact" class="btn-gold">Enquire Now</a>
+    <a href="#services" class="btn-outline-white">Our Services</a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-dot"></div>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<div id="about">
+  <div class="welcome">
+    <div class="fi">
+      <p class="w-pretitle">Welcome to Maison Delvaux</p>
+      <h2 class="w-title">the art of curated luxury</h2>
+      <div class="w-body">
+        <p>At Maison Delvaux, the sole aim is for our clients to experience the absolute best the world has to offer. Our service is entirely tailor-made to your individual or group requirements, unlocking the finest the world has to offer — through your personal concierge director.</p>
+        <p>With exclusive access to the finest yachts, Michelin-starred restaurants, ultra-luxury hotels, and private experiences across 12 global destinations, we are your key to a world without boundaries.</p>
+      </div>
+      <a href="#contact" class="btn-gold" style="margin-top:1.5rem">About Maison Delvaux</a>
+    </div>
+    <div class="w-imgs fi">
+      <img class="w-img1" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&fit=crop" alt="Luxury Hotel">
+      <img class="w-img2" src="https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=500&fit=crop" alt="Yacht">
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="services-wrap" id="services">
+  <div class="services-watermark">MD</div>
+  <div class="services-header">
+    <p class="sec-pre fi">Luxury Concierge Services Worldwide</p>
+    <h2 class="sec-title fi">our services</h2>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card"><img src="https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=700&fit=crop" alt="Yacht"><div class="svc-label"><h3>yacht charter</h3><span class="svc-link">Discover more →</span></div></div>
+    <div class="svc-card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&fit=crop" alt="Dining"><div class="svc-label"><h3>fine dining</h3><span class="svc-link">Discover more →</span></div></div>
+    <div class="svc-card"><img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=700&fit=crop" alt="Nightclub"><div class="svc-label"><h3>bars & nightlife</h3><span class="svc-link">Discover more →</span></div></div>
+    <div class="svc-card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&fit=crop" alt="Beach Club"><div class="svc-label"><h3>pool & beach clubs</h3><span class="svc-link">Discover more →</span></div></div>
+    <div class="svc-card"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700&fit=crop" alt="Hotel"><div class="svc-label"><h3>luxury stay</h3><span class="svc-link">Discover more →</span></div></div>
+    <div class="svc-card"><img src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?w=700&fit=crop" alt="Corporate"><div class="svc-label"><h3>corporate & events</h3><span class="svc-link">Discover more →</span></div></div>
+  </div>
+</div>
+
+<!-- FEATURED EXPERIENCES -->
+<div class="featured-wrap" id="experiences">
+  <div class="featured-header fi">
+    <p class="sec-pre">Curated Selection</p>
+    <h2 class="sec-title">featured experiences</h2>
+    <p class="sec-sub">A glimpse into the world that awaits you. Every experience is personalised, every detail considered.</p>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card fi">
+      <img src="https://images.unsplash.com/photo-1548438294-1ad5d5f4f063?w=600&fit=crop" alt="Superyacht">
+      <div class="feat-info">
+        <h4>Superyacht Charter</h4>
+        <div class="feat-meta"><span>Worldwide</span><span>From 4 hrs</span></div>
+        <a href="#contact" class="feat-enquire">Enquire →</a>
+      </div>
+    </div>
+    <div class="feat-card fi">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&fit=crop" alt="Michelin">
+      <div class="feat-info">
+        <h4>Michelin Star Table</h4>
+        <div class="feat-meta"><span>12 Cities</span><span>Same-day</span></div>
+        <a href="#contact" class="feat-enquire">Enquire →</a>
+      </div>
+    </div>
+    <div class="feat-card fi">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&fit=crop" alt="Suite">
+      <div class="feat-info">
+        <h4>Ultra-Luxury Suite</h4>
+        <div class="feat-meta"><span>12 Destinations</span><span>24/7 Support</span></div>
+        <a href="#contact" class="feat-enquire">Enquire →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BANNER -->
+<div class="stats-banner fi">
+  <div class="stats-banner-text">
+    <h3>luxury concierge services across 3 continents</h3>
+    <p>Discretion · Precision · Excellence</p>
+  </div>
+  <div class="stat-block">
+    <div class="stat-icon">📅</div>
+    <div class="stat-val">Est. 2024</div>
+    <div class="stat-lbl">Founded</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-icon">🕐</div>
+    <div class="stat-val">24/7</div>
+    <div class="stat-lbl">Concierge</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-icon">🌍</div>
+    <div class="stat-val">12</div>
+    <div class="stat-lbl">Destinations</div>
+  </div>
+</div>
+
+<!-- DESTINATIONS -->
+<div class="dest-wrap" id="destinations">
+  <div class="dest-header">
+    <p class="sec-pre fi">Worldwide Presence</p>
+    <h2 class="sec-title fi">our destinations</h2>
+    <p class="sec-sub fi">From the heights of Dubai to the shores of Monaco — we are wherever you need us.</p>
+  </div>
+  <div class="dest-grid">
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&fit=crop" alt="Dubai"><div class="dest-info"><h4>Dubai</h4><span>UAE ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1524668952756-0e0d5cc5ea0b?w=500&fit=crop" alt="Monaco"><div class="dest-info"><h4>Monaco</h4><span>French Riviera ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=500&fit=crop" alt="London"><div class="dest-info"><h4>London</h4><span>United Kingdom ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1540959733022-5ea265eb0c13?w=500&fit=crop" alt="Tokyo"><div class="dest-info"><h4>Tokyo</h4><span>Japan ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&fit=crop" alt="Miami"><div class="dest-info"><h4>Miami</h4><span>USA ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=500&fit=crop" alt="Paris"><div class="dest-info"><h4>Paris</h4><span>France ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1506870687944-bf2f26168fe4?w=500&fit=crop" alt="Hong Kong"><div class="dest-info"><h4>Hong Kong</h4><span>SAR China ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?w=500&fit=crop" alt="Barcelona"><div class="dest-info"><h4>Barcelona</h4><span>Spain ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1490644658840-3f2e3f8c5625?w=500&fit=crop" alt="New York"><div class="dest-info"><h4>New York</h4><span>USA ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=500&fit=crop" alt="Maldives"><div class="dest-info"><h4>Maldives</h4><span>Indian Ocean ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=500&fit=crop" alt="Madrid"><div class="dest-info"><h4>Madrid</h4><span>Spain ↗</span></div><div class="dest-border"></div></div>
+    <div class="dest-card fi"><img src="https://images.unsplash.com/photo-1520832573728-8b244d5dbc82?w=500&fit=crop" alt="Milan"><div class="dest-info"><h4>Milan</h4><span>Italy ↗</span></div><div class="dest-border"></div></div>
+  </div>
+</div>
+
+<!-- MORGANE DELVAUX -->
+<div class="morgane-wrap">
+  <div class="morgane-inner" style="grid-template-columns:1fr;max-width:780px">
+    <div class="morgane-text fi" style="text-align:center">
+      <p class="w-pretitle">The Vision Behind Maison Delvaux</p>
+      <h2 class="w-title">meet morgane delvaux</h2>
+      <p>Morgane Delvaux built Maison Delvaux with a singular conviction: that true luxury is not about price tags — it is about access, timing, and discretion.</p>
+      <p>With years of experience at the intersection of haute couture, hospitality, and exclusive networks, Morgane personally oversees every client relationship. No request is too complex, and no detail too small.</p>
+      <p>Her network spans from the Burj Al Arab to the private islands of the Maldives, from the ateliers of Milan to the beach clubs of Monaco.</p>
+      <div class="morgane-sig" style="text-align:center">Morgane Delvaux</div>
+      <div class="morgane-role" style="text-align:center">Founder & Concierge Director</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testi-wrap">
+  <div class="testi-inner">
+    <p class="sec-pre fi">Luxury Concierge Services Worldwide</p>
+    <h2 class="sec-title fi">what our clients say</h2>
+    <div class="testi-grid">
+      <div class="testi-card fi">
+        <p>"We had an extraordinary experience — every detail was planned to perfection and Morgane delivered on everything we asked for. We will 100% use Maison Delvaux again and recommend their services to anyone."</p>
+        <div class="testi-author"><div class="testi-avatar">AS</div><div class="testi-author-info"><h5>Alexandra S.</h5><span>Dubai, UAE</span></div></div>
+      </div>
+      <div class="testi-card featured fi">
+        <p>"Thank you for organising our private yacht party — we had a fantastic day. The staff were brilliant, the attention to detail extraordinary. We will definitely use Maison Delvaux in the future!"</p>
+        <div class="testi-author"><div class="testi-avatar">JM</div><div class="testi-author-info"><h5>James M.</h5><span>London, UK</span></div></div>
+      </div>
+      <div class="testi-card fi">
+        <p>"The Michelin restaurant reservation in Monaco was impossible — until Maison Delvaux made it happen within hours. This is what true concierge service looks like. Exceptional in every sense."</p>
+        <div class="testi-author"><div class="testi-avatar">SC</div><div class="testi-author-info"><h5>Sophie C.</h5><span>Paris, France</span></div></div>
+      </div>
+    </div>
+    <div class="testi-dots">
+      <span class="active"></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT CTA -->
+<div class="cta-wrap" id="contact">
+  <div class="cta-inner">
+    <p class="sec-pre fi">Get In Touch</p>
+    <h2 class="sec-title fi">begin your bespoke experience</h2>
+    <p class="body fi">Our concierge team is available 24 hours a day, 7 days a week. Every enquiry is handled with complete discretion and personal attention.</p>
+    <div>
+      <a href="tel:+971523068015" class="btn-gold">Call Us Now</a>
+      <a href="mailto:hello@maisondelvaux.ae" class="btn-outline-white" style="color:#333;border-color:#8B7755;margin-left:12px">Send an Enquiry</a>
+    </div>
+    <div class="contact-blocks">
+      <div class="c-block fi"><div class="c-block-icon">📞</div><h5>Contact</h5><p>+971 52 306 8015</p></div>
+      <div class="c-block fi"><div class="c-block-icon">📧</div><h5>Email</h5><p>hello@maisondelvaux.ae</p></div>
+      <div class="c-block fi"><div class="c-block-icon">📍</div><h5>Based In</h5><p>Jumeirah, Dubai, UAE</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo" style="font-family:'Lora',serif;font-weight:500;letter-spacing:.1em">MD <span style="font-family:'Poppins',sans-serif;font-size:1rem;font-weight:300;letter-spacing:.25em;text-transform:uppercase">Maison Delvaux</span></span>
+        <p>Elite luxury concierge services across 12 global destinations. Discretion, precision, and excellence — always.</p>
+        <p style="margin-top:.8rem;color:#8B7755;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase">+971 52 306 8015</p>
+      </div>
+      <div class="footer-col"><h5>Services</h5><a href="services.html">Yacht Charters</a><a href="services.html">Fine Dining</a><a href="services.html">Luxury Hotels</a><a href="services.html">Beach Clubs</a><a href="services.html">Private Shopping</a><a href="services.html">Corporate Events</a></div>
+      <div class="footer-col"><h5>Destinations</h5><a href="index.html#destinations">Dubai</a><a href="index.html#destinations">Monaco</a><a href="index.html#destinations">London</a><a href="index.html#destinations">Paris</a><a href="index.html#destinations">Maldives</a><a href="index.html#destinations">Tokyo</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="index.html#about">About Maison Delvaux</a><a href="index.html#about">Morgane Delvaux</a><a href="#contact">Enquire Now</a><a href="#contact">Privacy Policy</a><a href="#contact">Terms of Service</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Maison Delvaux | Luxury Concierge Excellence &nbsp;·&nbsp; Discretion · Precision · Excellence</p>
+      <div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP STICKY -->
+<a href="https://wa.me/971523068015?text=Hello%20Maison%20Delvaux%2C%20I%20would%20like%20to%20enquire%20about%20your%20concierge%20services." class="wa-btn" target="_blank" rel="noopener">
+  <div class="wa-tooltip">Chat with us</div>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+function toggleMenu(){document.getElementById('navMenu').classList.toggle('open')}
+function toggleDrop(el){if(window.innerWidth<=1100){el.parentElement.classList.toggle('open')}}
+
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting)setTimeout(()=>e.target.classList.add('vis'),i*70)
+  })
+},{threshold:.1})
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el))
+</script>
+</body>
+</html>
